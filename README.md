@@ -9,12 +9,12 @@ Hardware:
 RPI OS Raspbian
 Libs:
 Fluidsynth
-Alsa
+libasound2-dev Alsa (https://github.com/alsa-project)
 XXXXXXXXXXlib2
 
 A soundbank for organ sounds is imported into fluidsynth, most projects feature a hammond organ soundbank. I want this project to complete our casio privia organ sound so we try to find a soundbank that is matching to that soundbank.
 
-Fluidsynth default drivers are 'jack', these are not supported on raspbian so we change this to alsa.
+Fluidsynth default drivers are 'jack', these are not supported on Raspbian so we change this to Alsa, alsa is included in the libasound2-dev library.
 
 prompt: fluidsynth -a alsa -m alsa_seq
 
