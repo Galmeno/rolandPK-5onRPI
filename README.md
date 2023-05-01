@@ -10,9 +10,9 @@ RPI OS Raspbian
 Libs:
 Fluidsynth
 libasound2-dev Alsa (https://github.com/alsa-project)
-XXXXXXXXXXlib2
 
 A soundbank for organ sounds is imported into fluidsynth, most projects feature a hammond organ soundbank. I want this project to complete our casio privia organ sound so we try to find a soundbank that is matching to that soundbank.
+ fluidsynth -a alsa -m alsa_seq -l -i /usr/share/soundfonts/FluidR3_GM.sf2
 
 Fluidsynth default drivers are 'jack', these are not supported on Raspbian so we change this to Alsa, alsa is included in the libasound2-dev library.
 
@@ -26,6 +26,8 @@ Python version:
 
 When trying the hardware on a PC with fruityloops, the default windows drivers had too much latency for a meaningful playing experience.
 I managed to change to better sound drivers on the PC to get an ok latency. This is ofcourse equally important when on a linux platform.
+
+http://www.tedfelix.com/linux/linux-midi.html <- low latency kernel stuff, might be useful. This link also covers how to set up alsa midi input and set up fluidsynth as a server and connecting to Alsa.
 
 To do:
 *Setup the midi signal input
